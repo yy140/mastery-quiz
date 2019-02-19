@@ -26,6 +26,8 @@
 
 * (It's very important to note that making slow progress is OK.  If you've made a bit of progress on the problem in the last 20 minutes, maybe continue with what you're doing.)
 
+* 'Making progress' can mean things like changing your code in response to an error message, being able to implement a small requirement, finding useful information in the course materials or through Google.
+
 * If you haven't made any progress for 20 minutes, use the **[problem solving guide](https://makersacademy.teachable.com/courses/256825/lectures/3989121)**.
 
 ## When I run the automated tests with `rspec`, they fail
@@ -110,7 +112,7 @@ Let's wring every single piece of information we can from this error!
 17.       # ./spec/question_2_spec.rb:7:in `block (2 levels) in <top (required)>'
 ```
 
-* `1` tells us which question program has the error.
+* Line `1` tells us which question program has the error.
 
 * `2` tells us what the test is expecting the program to do.  That is: which part of the program specification it is checking.
 
@@ -135,6 +137,8 @@ Let's wring every single piece of information we can from this error!
 * `mastery_answer_code_quality` is a gem that is installed when you run `bundle install`.  
 
 * Run `bundle install` to install it.
+
+* If you're still seeing this error after running `bundle install`, and when running the `rspec` command in the correct directory, then try running the tests using `bundle exec rspec`.
 
 #### The test that fails is called `has acceptable code quality` and I don't know how to fix it
 
