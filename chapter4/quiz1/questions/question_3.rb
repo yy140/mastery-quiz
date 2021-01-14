@@ -7,3 +7,17 @@
 #     number is the result of `0 + 1`.
 # * `puts`es these numbers, one per line.
 
+i = 0
+
+fib_1 = 0
+fib_2 = 1
+
+while i <= 10
+  p fib_1
+  p fib_2
+  fib_1 = fib_1 + fib_2
+  fib_2 = fib_1 + fib_2
+  
+  i += 1
+
+end

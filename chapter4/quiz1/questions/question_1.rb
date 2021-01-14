@@ -11,16 +11,16 @@
 number = 1
 
 while number < 21 do
-    if number % 3 == 0
-        'Fizz'
-    elsif number % 5 == 0
-        'Buzz'
-    elsif (number % 5 && number % 3) == 0
-        'FizzBuzz'
-    else
-        number
-    end
-number += 1
+  if (number % 5) == 0 && (number % 3) == 0
+    puts 'FizzBuzz'
+  elsif number % 3 == 0
+    puts 'Fizz'
+  elsif number % 5 == 0
+    puts 'Buzz'
+  else
+    puts number
+  end
+  number += 1
 end
 
 
