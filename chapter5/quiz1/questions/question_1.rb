@@ -14,3 +14,33 @@
 #   $ ruby question_1.rb
 #   It is certain
 
+i = 0
+
+while i < 4 
+
+  prediction = rand(6)
+
+  case prediction
+    when 0
+      puts 'It is certain'
+    when 1
+      puts 'It is decidedly so'
+    when 2
+      puts 'Ask again later'
+    when 3
+      puts 'Outlook not so good'
+    when 4
+      puts 'Very doubtful'
+  end
+  i += 1
+end
+
+answer = rand(4)
+case answer
+  when 0
+    puts 'Ask again later'
+  when 1
+    puts 'Ask again later'
+  when 2
+    puts 'It is certain'
+end
