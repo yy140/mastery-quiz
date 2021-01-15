@@ -26,3 +26,28 @@
 # * Note: To pass the tests, you'll need to `puts` exactly what's
 #   expected. Watch out for stray punctuation, capital letters, etc.
 
+place = "passage"
+
+while true
+  direction = gets.chomp
+
+  case place
+  
+  when "passage"
+    if direction == "north"
+      puts "You are in a scary cave."
+      place = "cave"
+    end
+
+  when "cave"
+    if direction == "south"
+      puts "You are in a scary passage."
+      place = "passage"
+    elsif direction == "north"
+      puts "You walk into sunlight."
+      break
+    end
+  end
+end
+
+  
