@@ -63,4 +63,40 @@
 #   ```
 
 river = "-----,--C--,CC-CC,CC-CC"
+river_original = river.split(",")
+river_part = river.split(",")
 
+i = 0
+player_position = 2
+river_part[i][player_position] = "P"
+
+while true
+  puts river_part
+  move_direction = gets.chomp
+  i += 1
+  
+  if i == river_part.length
+    puts "You survived!"
+    break
+  end
+
+  case move_direction
+  when "left"
+    river_part[i - 1][player_position] = "-"
+    player_position -= 1
+    river_part[i][player_position] = "P"
+  when "right"
+    river_part[i - 1][player_position] = "-"
+    player_position += 1
+    river_part[i][player_position] = "P"
+  when "neither"
+    river_part[i - 1][player_position] = "-"
+    river_part[i][player_position] = "P"
+  end
+  
+  if river_original[i][player_position] == "C"
+    puts "You were eaten!"
+    break
+  end
+   
+end

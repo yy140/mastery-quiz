@@ -19,3 +19,12 @@
 # * Note: You can assume the user will only enter integers separated
 #   by commas with no spaces.
 
+user_input = gets.chomp
+array = user_input.split(",")
+
+array.each do |num|
+  (1..num.to_i).each do
+    print "-"
+  end
+  print "\n"
+end

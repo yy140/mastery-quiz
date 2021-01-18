@@ -51,3 +51,36 @@
 #   input integers for group numbers that exist when they are asked
 #   for the number of a group to print out.
 
+num_groups = gets.chomp.to_i
+groups = Array.new(num_groups) { Array.new(0) } 
+names = []
+
+while true
+ 
+  name = gets.chomp
+
+  if name == "stop"
+    break
+  else
+    names.push(name)
+  end
+end
+
+current_group_idx = 0 # first group idx
+names.each do |n|
+  if current_group_idx == num_groups
+    current_group_idx = 0
+  end
+  groups[current_group_idx].push(n)
+  current_group_idx += 1
+end
+
+while true 
+  
+  user_input = gets.chomp
+  if user_input == "stop"
+    break
+  else
+    puts "#{groups[user_input.to_i - 1].join(", ")}"
+  end
+end
