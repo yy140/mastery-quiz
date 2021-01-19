@@ -36,3 +36,29 @@ people = [
   { "name" => "Will", "sport" => "cycling", "fruit" => "blackberry" }
 ]
 
+category = gets.chomp
+fav_things = {}
+list = []
+people.each do |person|
+  sport = person["sport"]
+  fruit = person["fruit"]
+
+  case category
+  when "sport"
+    if fav_things[sport] == nil
+      fav_things[sport] = []
+    end
+    fav_things[sport].push(person["name"])
+
+  when "fruit"
+    if fav_things[fruit] == nil
+      fav_things[fruit] = []
+    end
+    fav_things[fruit].push(person["name"])
+  end
+end
+  
+fav_things.each do |k, v| 
+  list << k << v.flatten
+end
+puts list.flatten.join("\n")
